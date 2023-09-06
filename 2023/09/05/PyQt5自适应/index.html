@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Edwin"/>
+        <meta property="og:title" content="PyQt5 DPI自适应"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -47,7 +47,7 @@
 
     <!-- Title -->
     
-    <title>Archives: 2023/9 - Edwin</title>
+    <title>PyQt5 DPI自适应 - Edwin</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -124,9 +124,7 @@
 <div class="container">
 
     <!-- Main Content -->
-    
-
-<div class="row">
+    <div class="row">
     <div class="col-sm-12">
 
         <!--Title and Logo-->
@@ -134,34 +132,59 @@
     <div class="logo">
         <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
         
-            <h1 id="main-title" class="title">2023/9</h1>
-        
     </div>
 </header>
 
-        <section class="main archive-container">
+        <section class="main">
             
-                <div class="archive-post">
-    <a href="/2023/09/07/%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E6%94%B9%E5%8F%98%E8%AF%B4%E6%98%8E/">
-        <span class="archive-date">
-            Sep 2023
-        </span>
-        博客改变说明
-    </a>
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2023/09/05/PyQt5%E8%87%AA%E9%80%82%E5%BA%94/">
+                PyQt5 DPI自适应
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2023-09-05</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="因电脑DPI的问题导致的问题"><a href="#因电脑DPI的问题导致的问题" class="headerlink" title="因电脑DPI的问题导致的问题"></a>因电脑DPI的问题导致的问题</h1><h2 id="Bug"><a href="#Bug" class="headerlink" title="Bug"></a>Bug</h2><p>近期在尝试着用PyQt5+QtDesigner写一个医疗系统登录界面的UI，结果遇到这样的这样一个bug。直接进入正题，在QtDesigner中设计的如下图所示：<br>！<a href="./qd.png">图片丢失了</a><br>而运行出现出来的界面整体缩小了很多？？？？？<br>！<a href="./b1.jpg">图片丢失了</a></p>
+<h2 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h2><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>网上找了很多都没能解决这个问题，后来经过一位大神帮助才解决了这个问题。因为本地电脑分辨率的问题，导致UI界面缩放以及字体的缺失。</p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>只要在main函数构造窗体对象前加入DPI自适应的代码就可以完美解决问题了。废话不多说，直接上代码。<br><code>QGuiApplication.setAttribute(Qt.HighDpiScaleFactorRoundingPolicy.PassThrough)</code><br>看一下解决后的UI界面。<br><img src="/./d1.png" alt="图片丢失了"></p>
+<h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>开发工作还未完全完工，完工后会开源在GitHub上。</p>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/PyQt/">#PyQt</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
 </div>
-            
-                <div class="archive-post">
-    <a href="/2023/09/05/PyQt5%E8%87%AA%E9%80%82%E5%BA%94/">
-        <span class="archive-date">
-            Sep 2023
-        </span>
-        PyQt5 DPI自适应
-    </a>
-</div>
-            
         </section>
+
     </div>
 </div>
+
 
 </div>
 
