@@ -415,8 +415,17 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-09-10 21:25:28" itemprop="dateModified" datetime="2023-09-10T21:25:28+08:00">2023-09-10</time>
+                <time title="Modified: 2023-09-10 22:17:01" itemprop="dateModified" datetime="2023-09-10T22:17:01+08:00">2023-09-10</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/UI/" itemprop="url" rel="index"><span itemprop="name">UI</span></a>
+                </span>
+            </span>
 
           
 
@@ -429,9 +438,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="因电脑DPI的问题导致的问题"><a href="#因电脑DPI的问题导致的问题" class="headerlink" title="因电脑DPI的问题导致的问题"></a>因电脑DPI的问题导致的问题</h1><h2 id="Bug"><a href="#Bug" class="headerlink" title="Bug"></a>Bug</h2><p>近期在尝试着用PyQt5+QtDesigner写一个医疗系统登录界面的UI，结果遇到这样的这样一个bug。直接进入正题，在QtDesigner中设计的如下图所示：<br><img src="/.io//b1.jpg" alt="b1.jpg"><br>而运行出现出来的界面整体缩小了很多？？？？？<br><img src="/.io//d1.png" alt="d1.png"><br>+</p>
+          <h1 id="因电脑DPI的问题导致的问题"><a href="#因电脑DPI的问题导致的问题" class="headerlink" title="因电脑DPI的问题导致的问题"></a>因电脑DPI的问题导致的问题</h1><h2 id="Bug"><a href="#Bug" class="headerlink" title="Bug"></a>Bug</h2><p>近期在尝试着用PyQt5+QtDesigner写一个医疗系统登录界面的UI，结果遇到这样的这样一个bug。直接进入正题，在QtDesigner中设计的如下图所示：<br><img src="/.io//b1.jpg" alt="b1"><br>而运行出现出来的界面整体缩小了很多？？？？？<br><img src="/.io//d1.png" alt="d1"><br>+</p>
 <h2 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h2><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>网上找了很多都没能解决这个问题，后来经过一位大神帮助才解决了这个问题。因为本地电脑分辨率的问题，导致UI界面缩放以及字体的缺失。</p>
-<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>只要在main函数构造窗体对象前加入DPI自适应的代码就可以完美解决问题了。废话不多说，直接上代码。<br><code>QGuiApplication.setAttribute(Qt.HighDpiScaleFactorRoundingPolicy.PassThrough)</code><br>看一下解决后的UI界面。<br><img src="/.io//qd.png" alt="qd.png"></p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>只要在main函数构造窗体对象前加入DPI自适应的代码就可以完美解决问题了。废话不多说，直接上代码。<br><code>QGuiApplication.setAttribute(Qt.HighDpiScaleFactorRoundingPolicy.PassThrough)</code><br>看一下解决后的UI界面。<br><img src="/.io//d1qd.png" alt="qd"></p>
 <h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><p>开发工作还未完全完工，完工后会开源在GitHub上。</p>
 
       
@@ -521,12 +530,16 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">categories</span>
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
