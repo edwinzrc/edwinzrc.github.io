@@ -160,6 +160,86 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://edwinzrc.github.io/2023/09/24/Week3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Edwin Zhao">
+      <meta itemprop="description" content="major and interested in AI">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Edwin">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/09/24/Week3/" class="post-title-link" itemprop="url">Week3</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-09-24 23:28:01 / Modified: 22:01:42" itemprop="dateCreated datePublished" datetime="2023-09-24T23:28:01+08:00">2023-09-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MRI%E9%87%8D%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">MRI重建</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="周总结03"><a href="#周总结03" class="headerlink" title="周总结03"></a>周总结03</h1><h2 id="本周工作"><a href="#本周工作" class="headerlink" title="本周工作"></a>本周工作</h2><ul>
+<li>使用fastMRI数据集（knee-singlecoil)复现了Unet重建任务。</li>
+</ul>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><ul>
+<li>掩码（mask)：MRI 数据集通常包含大量的像素或体素。通过创建掩膜，选择感兴趣的区域，从而将注意力集中在特定的解剖结构或异常区域上，而不需要处理整个图像。应用了mask之后的MRI数据集被称为subsample。(注：mask可应用于kspace也可以应用于image)。<br>掩码更像一个可操作的工具：分割任务的时候可以将分割的部分mask置为1其他为0即可获得索要分割区域的单一图像；重建任务的目标也是为了得到噪声部分的mask合适参数。<br>fastmri数据集中每一个.h5文件后会带有一个二值mask，而在DuDoRNet中作者使用的数据集中不带有mask，而是根据acceleration创建了一个mask。</li>
+<li>下载的“.tar.xz”文件解压之后是一个包含了很多“.h5”文件的文件夹，其中包含了kspace和mask掩码（通过data[‘ksapce’] data[‘mask’]索引获取）。每一个文件由许多个slice组成，直接选取想要的slice个数即可。或者可以直接通过 fastmri.data.SliceDataset()获得训练集。</li>
+</ul>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
+<li>未完全清楚DuDoRNet的模型机制</li>
+<li>acceleration 加速因子</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这周基本上完全清楚了如何使用fastmri的数据，总体进度有所提升。</p>
+<h2 id="下周规划"><a href="#下周规划" class="headerlink" title="下周规划"></a>下周规划</h2><p>复现DuDoRNet,并且挑惨。使用brain数据集进行训练（因brain数据集较大，所以进度有所延误）。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://edwinzrc.github.io/2023/09/17/Week2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -611,7 +691,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

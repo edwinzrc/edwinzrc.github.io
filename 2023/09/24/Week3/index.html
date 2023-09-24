@@ -22,17 +22,20 @@
     var CONFIG = {"hostname":"edwinzrc.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="major and interested in AI">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Edwin">
-<meta property="og:url" content="http://edwinzrc.github.io/archives/2023/09/index.html">
+  <meta name="description" content="周总结03本周工作 使用fastMRI数据集（knee-singlecoil)复现了Unet重建任务。  心得 掩码（mask)：MRI 数据集通常包含大量的像素或体素。通过创建掩膜，选择感兴趣的区域，从而将注意力集中在特定的解剖结构或异常区域上，而不需要处理整个图像。应用了mask之后的MRI数据集被称为subsample。(注：mask可应用于kspace也可以应用于image)。掩码更像一个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Week3">
+<meta property="og:url" content="http://edwinzrc.github.io/2023/09/24/Week3/index.html">
 <meta property="og:site_name" content="Edwin">
-<meta property="og:description" content="major and interested in AI">
+<meta property="og:description" content="周总结03本周工作 使用fastMRI数据集（knee-singlecoil)复现了Unet重建任务。  心得 掩码（mask)：MRI 数据集通常包含大量的像素或体素。通过创建掩膜，选择感兴趣的区域，从而将注意力集中在特定的解剖结构或异常区域上，而不需要处理整个图像。应用了mask之后的MRI数据集被称为subsample。(注：mask可应用于kspace也可以应用于image)。掩码更像一个">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-09-24T15:28:01.000Z">
+<meta property="article:modified_time" content="2023-09-24T14:01:42.069Z">
 <meta property="article:author" content="Edwin Zhao">
+<meta property="article:tag" content="周总结">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://edwinzrc.github.io/archives/2023/09/">
+<link rel="canonical" href="http://edwinzrc.github.io/2023/09/24/Week3/">
 
 
 <script id="page-configurations">
@@ -40,12 +43,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Archive | Edwin</title>
+  <title>Week3 | Edwin</title>
   
 
 
@@ -154,150 +157,101 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 6 posts in total. Keep on posting.</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://edwinzrc.github.io/2023/09/24/Week3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Edwin Zhao">
+      <meta itemprop="description" content="major and interested in AI">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Edwin">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Week3
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-09-24 23:28:01 / Modified: 22:01:42" itemprop="dateCreated datePublished" datetime="2023-09-24T23:28:01+08:00">2023-09-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MRI%E9%87%8D%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">MRI重建</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2023</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2023-09-24T23:28:01+08:00"
-              content="2023-09-24">
-          09-24
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2023/09/24/Week3/" itemprop="url">
-            <span itemprop="name">Week3</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2023-09-17T23:28:01+08:00"
-              content="2023-09-17">
-          09-17
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2023/09/17/Week2/" itemprop="url">
-            <span itemprop="name">Week2</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2023-09-10T20:54:33+08:00"
-              content="2023-09-10">
-          09-10
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2023/09/10/fastMRI%E7%9A%84%E8%AF%BB%E5%8F%96/" itemprop="url">
-            <span itemprop="name">fastMRI的读取</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2023-09-10T20:34:19+08:00"
-              content="2023-09-10">
-          09-10
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2023/09/10/Week1/" itemprop="url">
-            <span itemprop="name">Week1</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2023-09-07T04:28:04+08:00"
-              content="2023-09-07">
-          09-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2023/09/07/%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E6%94%B9%E5%8F%98%E8%AF%B4%E6%98%8E/" itemprop="url">
-            <span itemprop="name">博客改变说明</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2023-09-05T23:14:37+08:00"
-              content="2023-09-05">
-          09-05
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2023/09/05/PyQt5DPI%E8%87%AA%E9%80%82%E5%BA%94/" itemprop="url">
-            <span itemprop="name">PyQt5 DPI自适应</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+        <h1 id="周总结03"><a href="#周总结03" class="headerlink" title="周总结03"></a>周总结03</h1><h2 id="本周工作"><a href="#本周工作" class="headerlink" title="本周工作"></a>本周工作</h2><ul>
+<li>使用fastMRI数据集（knee-singlecoil)复现了Unet重建任务。</li>
+</ul>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><ul>
+<li>掩码（mask)：MRI 数据集通常包含大量的像素或体素。通过创建掩膜，选择感兴趣的区域，从而将注意力集中在特定的解剖结构或异常区域上，而不需要处理整个图像。应用了mask之后的MRI数据集被称为subsample。(注：mask可应用于kspace也可以应用于image)。<br>掩码更像一个可操作的工具：分割任务的时候可以将分割的部分mask置为1其他为0即可获得索要分割区域的单一图像；重建任务的目标也是为了得到噪声部分的mask合适参数。<br>fastmri数据集中每一个.h5文件后会带有一个二值mask，而在DuDoRNet中作者使用的数据集中不带有mask，而是根据acceleration创建了一个mask。</li>
+<li>下载的“.tar.xz”文件解压之后是一个包含了很多“.h5”文件的文件夹，其中包含了kspace和mask掩码（通过data[‘ksapce’] data[‘mask’]索引获取）。每一个文件由许多个slice组成，直接选取想要的slice个数即可。或者可以直接通过 fastmri.data.SliceDataset()获得训练集。</li>
+</ul>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
+<li>未完全清楚DuDoRNet的模型机制</li>
+<li>acceleration 加速因子</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这周基本上完全清楚了如何使用fastmri的数据，总体进度有所提升。</p>
+<h2 id="下周规划"><a href="#下周规划" class="headerlink" title="下周规划"></a>下周规划</h2><p>复现DuDoRNet,并且挑惨。使用brain数据集进行训练（因brain数据集较大，所以进度有所延误）。</p>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%91%A8%E6%80%BB%E7%BB%93/" rel="tag"><i class="fa fa-google"></i> 周总结</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/09/17/Week2/" rel="prev" title="Week2">
+      <i class="fa fa-chevron-left"></i> Week2
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
@@ -350,6 +304,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%A8%E6%80%BB%E7%BB%9303"><span class="nav-number">1.</span> <span class="nav-text">周总结03</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%91%A8%E5%B7%A5%E4%BD%9C"><span class="nav-number">1.1.</span> <span class="nav-text">本周工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%83%E5%BE%97"><span class="nav-number">1.2.</span> <span class="nav-text">心得</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">1.3.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E5%91%A8%E8%A7%84%E5%88%92"><span class="nav-number">1.5.</span> <span class="nav-text">下周规划</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
