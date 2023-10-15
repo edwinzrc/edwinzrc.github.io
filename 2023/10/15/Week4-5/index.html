@@ -22,19 +22,20 @@
     var CONFIG = {"hostname":"edwinzrc.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="major and interested in AI">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tags">
-<meta property="og:url" content="http://edwinzrc.github.io/tags/index.html">
+  <meta name="description" content="周总结04-05本周工作 mri重建的综述 代码复现 diffusion 模型 医疗影像基础  心得 近段时间diffusion模型较为火热。相比较于GANS，diffusion不容易过拟合的优点受到广泛关注。而且众所周知GANS复现时很难达到原文一样的效果，而diffusion就有个更好的泛性。diffusion model 主要思想是学习添加噪声的过程（噪声本身就是一个训练目标）。同时最近也出">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Week4-5">
+<meta property="og:url" content="http://edwinzrc.github.io/2023/10/15/Week4-5/index.html">
 <meta property="og:site_name" content="Edwin">
-<meta property="og:description" content="major and interested in AI">
+<meta property="og:description" content="周总结04-05本周工作 mri重建的综述 代码复现 diffusion 模型 医疗影像基础  心得 近段时间diffusion模型较为火热。相比较于GANS，diffusion不容易过拟合的优点受到广泛关注。而且众所周知GANS复现时很难达到原文一样的效果，而diffusion就有个更好的泛性。diffusion model 主要思想是学习添加噪声的过程（噪声本身就是一个训练目标）。同时最近也出">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-09-06T20:29:13.000Z">
-<meta property="article:modified_time" content="2023-09-10T14:14:03.668Z">
+<meta property="article:published_time" content="2023-10-15T15:12:58.000Z">
+<meta property="article:modified_time" content="2023-10-15T16:11:09.225Z">
 <meta property="article:author" content="Edwin Zhao">
+<meta property="article:tag" content="周总结">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://edwinzrc.github.io/tags/">
+<link rel="canonical" href="http://edwinzrc.github.io/2023/10/15/Week4-5/">
 
 
 <script id="page-configurations">
@@ -42,13 +43,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Tags | Edwin
-</title>
+  <title>Week4-5 | Edwin</title>
   
 
 
@@ -156,51 +156,116 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="en">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://edwinzrc.github.io/2023/10/15/Week4-5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Edwin Zhao">
+      <meta itemprop="description" content="major and interested in AI">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Edwin">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Week4-5
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">Tags
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
 
-<div class="post-meta">
+              <time title="Created: 2023-10-15 23:12:58" itemprop="dateCreated datePublished" datetime="2023-10-15T23:12:58+08:00">2023-10-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-10-16 00:11:09" itemprop="dateModified" datetime="2023-10-16T00:11:09+08:00">2023-10-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MRI%E9%87%8D%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">MRI重建</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="周总结04-05"><a href="#周总结04-05" class="headerlink" title="周总结04-05"></a>周总结04-05</h1><h2 id="本周工作"><a href="#本周工作" class="headerlink" title="本周工作"></a>本周工作</h2><ul>
+<li>mri重建的综述</li>
+<li>代码复现</li>
+<li>diffusion 模型</li>
+<li>医疗影像基础</li>
+</ul>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><ul>
+<li>近段时间diffusion模型较为火热。相比较于GANS，diffusion不容易过拟合的优点受到广泛关注。而且众所周知GANS复现时很难达到原文一样的效果，而diffusion就有个更好的泛性。<br>diffusion model 主要思想是学习添加噪声的过程（噪声本身就是一个训练目标）。同时最近也出现几篇transformer的论文，也为后续工作提供思路。</li>
+<li>MRI（核磁共振）主要是通过变化的磁场引起共振，通过检测共振的频率来获得kspace频域。multi-coil相对于single-coil主要是为了提升图像质量（multi图像大部分优于single).<br>T1，T2主要是检测共振频率纬度不同（T1检测的是x-y上的，T2是z上的）。</li>
+</ul>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
+<li>cuda 环境的问题一直未解决导致复现进度开展的十分慢,各种版本的问题持续报错。</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>环境一直配不成功导致很多的问题的出现，一定要尽快解决迎难而上。</li>
+</ul>
+<h2 id="下周规划"><a href="#下周规划" class="headerlink" title="下周规划"></a>下周规划</h2><ul>
+<li>完成conda虚拟环境的配置。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%91%A8%E6%80%BB%E7%BB%93/" rel="tag"><i class="fa fa-google"></i> 周总结</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/09/24/Week3/" rel="prev" title="Week3">
+      <i class="fa fa-chevron-left"></i> Week3
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-              4 tags in total
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/PyQt/" style="font-size: 12px; color: #ccc">PyQt</a> <a href="/tags/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/" style="font-size: 12px; color: #ccc">关于博客</a> <a href="/tags/%E5%91%A8%E6%80%BB%E7%BB%93/" style="font-size: 30px; color: #111">周总结</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96/" style="font-size: 12px; color: #ccc">数据读取</a>
-            </div>
-          </div>
-        
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
@@ -251,6 +316,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%A8%E6%80%BB%E7%BB%9304-05"><span class="nav-number">1.</span> <span class="nav-text">周总结04-05</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%91%A8%E5%B7%A5%E4%BD%9C"><span class="nav-number">1.1.</span> <span class="nav-text">本周工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%83%E5%BE%97"><span class="nav-number">1.2.</span> <span class="nav-text">心得</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">1.3.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E5%91%A8%E8%A7%84%E5%88%92"><span class="nav-number">1.5.</span> <span class="nav-text">下周规划</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

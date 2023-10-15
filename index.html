@@ -160,6 +160,98 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://edwinzrc.github.io/2023/10/15/Week4-5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Edwin Zhao">
+      <meta itemprop="description" content="major and interested in AI">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Edwin">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/10/15/Week4-5/" class="post-title-link" itemprop="url">Week4-5</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-10-15 23:12:58" itemprop="dateCreated datePublished" datetime="2023-10-15T23:12:58+08:00">2023-10-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-10-16 00:11:09" itemprop="dateModified" datetime="2023-10-16T00:11:09+08:00">2023-10-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MRI%E9%87%8D%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">MRI重建</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="周总结04-05"><a href="#周总结04-05" class="headerlink" title="周总结04-05"></a>周总结04-05</h1><h2 id="本周工作"><a href="#本周工作" class="headerlink" title="本周工作"></a>本周工作</h2><ul>
+<li>mri重建的综述</li>
+<li>代码复现</li>
+<li>diffusion 模型</li>
+<li>医疗影像基础</li>
+</ul>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><ul>
+<li>近段时间diffusion模型较为火热。相比较于GANS，diffusion不容易过拟合的优点受到广泛关注。而且众所周知GANS复现时很难达到原文一样的效果，而diffusion就有个更好的泛性。<br>diffusion model 主要思想是学习添加噪声的过程（噪声本身就是一个训练目标）。同时最近也出现几篇transformer的论文，也为后续工作提供思路。</li>
+<li>MRI（核磁共振）主要是通过变化的磁场引起共振，通过检测共振的频率来获得kspace频域。multi-coil相对于single-coil主要是为了提升图像质量（multi图像大部分优于single).<br>T1，T2主要是检测共振频率纬度不同（T1检测的是x-y上的，T2是z上的）。</li>
+</ul>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
+<li>cuda 环境的问题一直未解决导致复现进度开展的十分慢,各种版本的问题持续报错。</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>环境一直配不成功导致很多的问题的出现，一定要尽快解决迎难而上。</li>
+</ul>
+<h2 id="下周规划"><a href="#下周规划" class="headerlink" title="下周规划"></a>下周规划</h2><ul>
+<li>完成conda虚拟环境的配置。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://edwinzrc.github.io/2023/09/24/Week3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -691,7 +783,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
